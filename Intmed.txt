@@ -1,0 +1,37 @@
+1	;; print from first space to end of string
+2	
+3	section .data
+4		Sym#0 db 546869732069732074686520737472696E6700
+5		Sym#1 db 5468697320697320616E6F7468657220737472696E6700000A
+6		Sym#2 dd 0XA,0X14
+7	section .bss
+8		Sym#3 resd 0X3
+9	section .text
+10		global main
+11	Label#4:
+12		xor 32#R1 32#R1
+13		mov 32#R0 #Sym0
+14	Label#5:
+15		cmp byte[32#R0] Lit#5
+16		jz Label#6
+17		inc 32#R1
+18		inc 32#R0
+19		jmp Label#5
+20	Label#6:
+21		xor 32#R2 32#R2
+22		inc 32#R0
+23		push 32#R0
+24	Label#7:
+25		cmp byte[32#R0] Lit#5
+26		jz Label#8
+27		inc 32#R2
+28		inc 32#R0
+29		jmp Label#7
+30		
+31	Label#8:
+32		pop 32#R0
+33		mov 32#R6 32#R0
+34		mov 32#R0 Lit#6
+35		mov 32#R3 Lit#7
+36		mov 32#R1 32#R6
+37		int 0x80

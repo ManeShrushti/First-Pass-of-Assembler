@@ -1,0 +1,9 @@
+0	4	First	2	20	S	D	0	"This is the string",0
+1	5	Second	2	30	S	D	20	"This is another string",0,10
+2	6	a	4	2	S	D	50	10,20
+3	8	n	4	3	S	D	58	3
+4	11	main	-	-	L	D	0	-
+5	14	pqr	-	-	L	D	0	-
+6	16	xyz	-	-	L	U	0	-
+7	24	abc	-	-	L	D	0	-
+8	26	tst	-	-	L	U	0	-
